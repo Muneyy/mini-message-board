@@ -1,0 +1,11 @@
+extends layout 
+
+block content
+    h1= title
+    p Welcome to #{title}
+    form#submit-form(action="/new", method="post") 
+        label(for="user") User
+        input#user(type="text", name="user")
+        label(for="content") Content
+        textarea#content(rows = "10", name="content")
+        input#submit(type="submit", value="Submit")
